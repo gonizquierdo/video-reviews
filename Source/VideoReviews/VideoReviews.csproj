@@ -176,6 +176,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\VideoRecordingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,6 +216,36 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Vendor\videojs\css\videojs.record.css" />
+    <Content Include="Vendor\videojs\css\videojs.record.min.css" />
+    <Content Include="Vendor\videojs\fonts\videojs-record.svg" />
+    <Content Include="Vendor\videojs\lang\af.js" />
+    <Content Include="Vendor\videojs\lang\de.js" />
+    <Content Include="Vendor\videojs\lang\en.js" />
+    <Content Include="Vendor\videojs\lang\es.js" />
+    <Content Include="Vendor\videojs\lang\fi.js" />
+    <Content Include="Vendor\videojs\lang\fr.js" />
+    <Content Include="Vendor\videojs\lang\fy.js" />
+    <Content Include="Vendor\videojs\lang\gl.js" />
+    <Content Include="Vendor\videojs\lang\it.js" />
+    <Content Include="Vendor\videojs\lang\nl.js" />
+    <Content Include="Vendor\videojs\lang\pt.js" />
+    <Content Include="Vendor\videojs\lang\ru.js" />
+    <Content Include="Vendor\videojs\lang\sv.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.lamejs.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.lamejs.min.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.libvorbis.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.libvorbis.min.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.opus-recorder.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.opus-recorder.min.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.recorderjs.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.recorderjs.min.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.ts-ebml.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.ts-ebml.min.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.vmsg.js" />
+    <Content Include="Vendor\videojs\plugins\videojs.record.vmsg.min.js" />
+    <Content Include="Vendor\videojs\videojs.record.js" />
+    <Content Include="Vendor\videojs\videojs.record.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -249,6 +280,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\VideoRecording\Index.cshtml" />
+    <Content Include="Vendor\videojs\fonts\videojs-record.ttf" />
+    <Content Include="Vendor\videojs\fonts\videojs-record.woff" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
