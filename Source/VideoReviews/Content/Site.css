@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.reviewVideo {
+    width: 184px !important;
+    height: 140px !important;
+}
