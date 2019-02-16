@@ -13,6 +13,10 @@ namespace VideoReviews.DAL.Domain.Entities
 
         public string Description { get; set; }
 
+        public string Source { get; set; }
+
+        public string Thumbnail { get; set; }
+
         public List<VideoComment> Comments { get; set; }
     }
 }
