@@ -16,7 +16,7 @@ namespace VideoReviews.DAL.Domain.Repositories
         }
         public IList<Video> VideosWithUser()
         {
-            return Entities.Include(x => x.Tenant).ToList();
+            return Entities.Include(x => x.Tenant).Include(x => x.Reviews).ToList();
         }
     }
 }

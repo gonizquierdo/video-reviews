@@ -19,5 +19,6 @@ namespace VideoReviews.DAL
         public DbSet<User> User { get; set; }
         public DbSet<Video> Video { get; set; }
         public DbSet<VideoComment> VideoComment { get; set; }
+        public DbSet<VideoReview> VideoReview { get; set; }
     }
 }

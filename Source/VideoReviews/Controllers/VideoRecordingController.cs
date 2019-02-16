@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VideoReviews.DAL.Domain.Entities;
+using VideoReviews.DAL.Domain.Repositories;
 
 namespace VideoReviews.Controllers
 {
@@ -18,8 +20,24 @@ namespace VideoReviews.Controllers
         public JsonResult UploadReview(long videoId, HttpPostedFileBase file)
         {
             var videoName = $"{Guid.NewGuid().ToString()}.webm";
-            string nameAndLocation = $"~/Reviews/video{videoId}/{videoName}";
-            file.SaveAs(Server.MapPath(nameAndLocation));
+            try
+            {
+                string nameAndLocation = $"/Reviews/{videoName}";
+                file.SaveAs(Server.MapPath(nameAndLocation));
+
+                VideoReview review = new VideoReview()
+                {
+                    VideoID = videoId,
+                    Url = nameAndLocation
+                };
+                VideoReviewRepository videoReviewRepository = new VideoReviewRepository(new DAL.VideoReviewsContext());
+                videoReviewRepository.Add(review);
+                videoReviewRepository.PersistChanges();
+            } catch (Exception ex)
+            {
+
+            }
+            
             return Json("ok");
         }
     }

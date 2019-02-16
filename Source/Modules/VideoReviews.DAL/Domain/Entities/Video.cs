@@ -18,5 +18,7 @@ namespace VideoReviews.DAL.Domain.Entities
         public string Thumbnail { get; set; }
 
         public List<VideoComment> Comments { get; set; }
+
+        public List<VideoReview> Reviews { get; set; }
     }
 }

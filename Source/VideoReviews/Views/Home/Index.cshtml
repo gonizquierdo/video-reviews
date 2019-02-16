@@ -27,55 +27,27 @@
                             <div class="modal-body">
 
                                 <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                    <video controls="controls">
+                                    <video controls="controls" id="video_@video.Id">
                                         <source src="/@video.Source" type="video/mp4" />
                                     </video>
                                 </div>
+                                <button type="button" class="btn btn-success reactButton" data-videoid="@video.Id">Reaccionar</button>
                                 <div>
                                     <h2>Reviews del clip</h2>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-12 mb-4">
-                                            <a>
-                                                <img style="padding:2px" class="img-responsive img-fluid z-depth-1" src="/@video.Thumbnail" alt="video"
-                                                     data-toggle="modal" data-target="#@guid">
-                                            </a>
+                                    @foreach (var reviewRow in video.Reviews.TakeBy(3))
+                                    {
+                                        <div class="row">
+                                            @foreach (var review in reviewRow)
+                                            {
+                                                <div class="col-lg-4 col-md-12 mb-4">
+                                                    <a>
+                                                        <img style="padding:2px" class="Review img-responsive img-fluid z-depth-1" src="/@video.Thumbnail" alt="video" data-reviewsrc="@review.Url" data-videoid="@video.Id">
+                                                    </a>
+                                                </div>
+                                            }
                                         </div>
-                                        <div class="col-lg-4 col-md-12 mb-4">
-                                            <a>
-                                                <img style="padding:2px" class="img-responsive img-fluid z-depth-1" src="/@video.Thumbnail" alt="video"
-                                                     data-toggle="modal" data-target="#@guid">
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12 mb-4">
-                                            <a>
-                                                <img style="padding:2px" class="img-responsive img-fluid z-depth-1" src="/@video.Thumbnail" alt="video"
-                                                     data-toggle="modal" data-target="#@guid">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-12 mb-4">
-                                            <a>
-                                                <img style="padding:2px" class="img-responsive img-fluid z-depth-1" src="/@video.Thumbnail" alt="video"
-                                                        data-toggle="modal" data-target="#@guid">
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12 mb-4">
-                                            <a>
-                                                <img style="padding:2px" class="img-responsive img-fluid z-depth-1" src="/@video.Thumbnail" alt="video"
-                                                        data-toggle="modal" data-target="#@guid">
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12 mb-4">
-                                            <a>
-                                                <img style="padding:2px" class="img-responsive img-fluid z-depth-1" src="/@video.Thumbnail" alt="video"
-                                                        data-toggle="modal" data-target="#@guid">
-                                            </a>
-                                        </div>
-
-                                    </div>
-                                    </div>
+                                    }
+                                </div>
 
                             </div>
 
@@ -123,4 +95,19 @@
                 $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
             }
         });
-    </script>}
+
+        $(document).ready(function () {
+            $(".reactButton").on("click", captureReaction);
+            $(".Review").on("click", viewReview);
+        })
+
+    </script>
+
+    <script src="https://vjs.zencdn.net/7.4.1/video.min.js"></script>
+    <script src="https://webrtcexperiment-webrtc.netdna-ssl.com/RecordRTC.js"></script>
+    <script src="https://collab-project.github.io/videojs-record/dist/videojs.record.min.js"></script>
+    <script src="https://collab-project.github.io/videojs-record/examples/browser-workarounds.js"></script>
+    <link href="https://collab-project.github.io/videojs-record/dist/css/videojs.record.min.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.min.css" rel="stylesheet">
+    <script src="~/Scripts/VideoReactions.js"></script>
+}
