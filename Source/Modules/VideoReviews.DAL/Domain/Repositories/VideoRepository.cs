@@ -1,6 +1,7 @@
 ﻿using RepositoryDatabaseAccess.Domain.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,10 @@ namespace VideoReviews.DAL.Domain.Repositories
     {
         public VideoRepository(VideoReviewsContext dbContext, long userId) : base(dbContext, userId)
         {
+        }
+        public IList<Video> VideosWithUser()
+        {
+            return Entities.Include(x => x.Tenant).ToList();
         }
     }
 }

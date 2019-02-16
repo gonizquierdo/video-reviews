@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VideoReviews.DAL.Domain.Repositories;
 
 namespace VideoReviews.Controllers
 {
@@ -10,7 +11,8 @@ namespace VideoReviews.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var videoRepository = new VideoRepository(new DAL.VideoReviewsContext(), 1);            
+            return View(videoRepository.VideosWithUser());
         }
 
         public ActionResult About()
