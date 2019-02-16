@@ -57,6 +57,10 @@
     <Compile Include="Migrations\201902161822185_InitialDatabaseStructure.Designer.cs">
       <DependentUpon>201902161822185_InitialDatabaseStructure.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902162028238_Source-Thumbnail-in-video.cs" />
+    <Compile Include="Migrations\201902162028238_Source-Thumbnail-in-video.Designer.cs">
+      <DependentUpon>201902162028238_Source-Thumbnail-in-video.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="VideoReviewsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902161822185_InitialDatabaseStructure.resx">
       <DependentUpon>201902161822185_InitialDatabaseStructure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902162028238_Source-Thumbnail-in-video.resx">
+      <DependentUpon>201902162028238_Source-Thumbnail-in-video.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
