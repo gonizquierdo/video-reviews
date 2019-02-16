@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoReviews", "VideoReviews\VideoReviews.csproj", "{DB477848-63FA-469B-AD74-114EC4C56C42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoReviews.DAL", "Modules\VideoReviews.DAL\VideoReviews.DAL.csproj", "{6542B6F9-4EE5-4E4B-AC87-8385E5F2DB70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryDatabaseAccess", "Modules\RepositoryDatabaseAccess\RepositoryDatabaseAccess.csproj", "{39FBDDFF-722E-421D-8B34-77276A5BA522}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DB477848-63FA-469B-AD74-114EC4C56C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB477848-63FA-469B-AD74-114EC4C56C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB477848-63FA-469B-AD74-114EC4C56C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6542B6F9-4EE5-4E4B-AC87-8385E5F2DB70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6542B6F9-4EE5-4E4B-AC87-8385E5F2DB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6542B6F9-4EE5-4E4B-AC87-8385E5F2DB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6542B6F9-4EE5-4E4B-AC87-8385E5F2DB70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39FBDDFF-722E-421D-8B34-77276A5BA522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39FBDDFF-722E-421D-8B34-77276A5BA522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39FBDDFF-722E-421D-8B34-77276A5BA522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39FBDDFF-722E-421D-8B34-77276A5BA522}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
